@@ -1,0 +1,24 @@
+<h1>{{type}} Request Received</h1>
+<table>
+	<tr><th colspan="2">All Data Received:</th></tr>
+	{{#if hasUrl}}
+	<tr><td colspan="2">Url Data:</th></tr>
+	<tr><td>Name</td><td>Value</td></tr>
+	{{/if}}
+  {{#each urlParams}}
+	<tr>
+    <td>{{this.name}}</td>
+    <td>{{this.value}}</td>
+    </tr>
+  {{/each}}
+  {{#if hasBody}}
+    <tr><td colspan="2">Body Data:</th></tr>
+    <tr><td>Name</td><td>Value</td></tr>
+  {{/if}}
+  {{#each bodyParams}}
+	<tr>
+    <td>{{this.name}}</td>
+    <td>{{this.value}}</td>
+    </tr>
+  {{/each}}
+</table>
