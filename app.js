@@ -8,7 +8,7 @@ app.use(bodyParser.urlencoded({ extended: true })); // support url encoded bodie
 
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
-app.set('port', 3000);
+app.set('port', 8998);
 
 app.get('/',function(req,res){
   var context = {};
